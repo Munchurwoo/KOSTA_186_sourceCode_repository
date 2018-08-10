@@ -1,6 +1,6 @@
 # KOSTA_186_sourceCode_repository
-:memo: 
-> Kost 웹어플리케이션 과정 Source 
+
+> :memo: Kost 웹어플리케이션 과정 Source 
 <h3> 서정우 강사님 <h3> <br>
 1. JAVA SE <br>
 2. Oracle, jdbc <br> 
