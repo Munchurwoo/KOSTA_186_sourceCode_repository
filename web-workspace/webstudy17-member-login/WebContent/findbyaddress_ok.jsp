@@ -1,4 +1,5 @@
-<%@page import="org.kosta.model.ProductVO"%>
+<%@page import="org.kosta.model.MemberVO"%>
+<%@page import="org.kosta.model.MemberDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -6,20 +7,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>product_list</title>
+<title>Insert title here</title>
 <style type="text/css">
 th, td {
-	padding: 10px;
+	padding:10px;
 }
 </style>
 </head>
 <body>
-	<a href="index.jsp">Home</a>
-	<hr>
 	<%
 		@SuppressWarnings("unchecked")
-		ArrayList<ProductVO> list = (ArrayList<ProductVO>) request.getAttribute("list");
+		ArrayList<MemberVO> list = (ArrayList<MemberVO>) request.getAttribute("list");
 	%>
+	<strong><%=request.getParameter("address")%>에 사는 맴버</strong>
 	<table border="1">
 		<thead>
 			<tr>
@@ -33,21 +33,12 @@ th, td {
 			%>
 			<tr>
 				<td><%=list.get(i).getId()%></td>
-				<td>
-				<a href="front?command=findProductById&id=<%=list.get(i).getId()%>"><%=list.get(i).getName()%></a>
-				</td>
+				<td><%=list.get(i).getAddress()%></td>
 			</tr>
 			<%
 				}
 			%>
 		</tbody>
 	</table>
-
 </body>
-
-
-
-
-
-
 </html>

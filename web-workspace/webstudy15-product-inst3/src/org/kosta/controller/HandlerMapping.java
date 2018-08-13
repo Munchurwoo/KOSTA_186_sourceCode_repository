@@ -12,8 +12,8 @@ public class HandlerMapping {
 		Controller controller=null;
 		if(command.equals("getAllProductList")) {
 			controller=new GetAllProductListController();//findMemberById
-		}else if(command.equals("findMemberById")) {
-			controller=new FindMemberByIdController();
+		}else if(command.equals("findProductById")) {
+			controller=new FindProductByIdController();
 		}else if(command.equals("registerProduct")) {
 			controller=new RegisterProduct();
 		}
