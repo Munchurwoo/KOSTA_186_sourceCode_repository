@@ -9,6 +9,7 @@
 <body background="아이유-배경화면.jpg">
 <h3>클라이언트 요청에 대한 서정우 서버의 응답입니다. </h3>
 사용자가 입력한 아이디 : <%=request.getParameter("userId") %>
+<%=request.getParameter("command") %>
 </body>
 </html>
 

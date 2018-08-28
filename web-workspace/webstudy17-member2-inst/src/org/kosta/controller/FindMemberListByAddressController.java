@@ -14,12 +14,15 @@ public class FindMemberListByAddressController implements Controller {
 		String address=request.getParameter("address");
 		ArrayList<MemberVO> list=
 				MemberDAO.getInstance().findMemberListByAddress(address);
-		if(list.isEmpty()) {
+		request.setAttribute("list", list);
+		return "member/findbyaddress_result.jsp";
+		
+		/*if(list.isEmpty()) {
 			return "findbyaddress_fail.jsp";
 		}else {
 			request.setAttribute("list", list);
 			return "findbyaddress_ok.jsp";
-		}		
+		}	*/	
 	}
 }
 
